@@ -9,11 +9,19 @@ Based on the initial coordinates and your simulation purposes, edit the starting
 
 How to run:
 
-**Step 1:** perl generate_inputs.perl #This will create all input files needed for min, equil. and production steps for each distance/dihedral window. Here the restraind goes from 6Å to 30Å in intervals of 0.5Å
+**Step 1:** perl generate_inputs.perl
 
-**Step 2:** sh run.sh #This initiates the simulations
+#This will create all input files needed for min, equil. and production steps for each distance/dihedral window. Here the restraind goes from 6Å to 30Å in intervals of 0.5Å
 
-**Step 2:** perl create_meta.perl #After the simulations are done, this will generate the distance files needed to be processed by WHAM or the Python code provided
+**Step 2:** sh run.sh
+
+#This initiates the simulations
+
+**Step 2:** perl create_meta.perl
+
+#After the simulations are done, this will generate the distance files needed to be processed by WHAM or the Python code provided
 
 
-**Step 3:** python PMF-calc_and_plot.py #Make sure to revise all parameters if used a force constant different than 400 kcal/(mol·Å²)
+**Step 3:** python PMF-calc_and_plot.py
+
+#Make sure to revise all parameters if used a force constant different than 400 kcal/(mol·Å²)
