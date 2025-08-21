@@ -22,8 +22,8 @@ for d in $(seq 6.0 0.5 30.0); do
 
   echo ">>> Running for distance $d_clean Å"
 
-  $AMBERHOME/bin/pmemd.cuda -O -i mdin_min.$d_clean  -p complex_rdy.top -c step9.rst -r min_$d_clean.rst  -o min_$d_clean.out
-  $AMBERHOME/bin/pmemd.cuda -O -i mdin_equi.$d_clean -p complex_rdy.top -c min_$d_clean.rst  -r equi_$d_clean.rst -o equi_$d_clean.out
-  $AMBERHOME/bin/pmemd.cuda -O -i mdin_prod.$d_clean -p complex_rdy.top -c equi_$d_clean.rst -r prod_$d_clean.rst -o prod_$d_clean.out
+  $AMBERHOME/bin/pmemd.cuda -O -i mdin_min.$d_clean  -p complex.prmtop -c post_cmd_prod.rst -r min_$d_clean.rst  -o min_$d_clean.out
+  $AMBERHOME/bin/pmemd.cuda -O -i mdin_equi.$d_clean -p complex.prmtop -c min_$d_clean.rst  -r equi_$d_clean.rst -o equi_$d_clean.out
+  $AMBERHOME/bin/pmemd.cuda -O -i mdin_prod.$d_clean -p complex.prmtop -c equi_$d_clean.rst -r prod_$d_clean.rst -o prod_$d_clean.out
 done
 
