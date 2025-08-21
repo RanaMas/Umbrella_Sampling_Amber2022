@@ -11,7 +11,7 @@ How to run:
 
 **Step 1:** perl generate_inputs.perl
 
-#This will create all input files needed for min, equil. and production steps for each distance/dihedral window. Here the restraind goes from 6Å to 30Å in intervals of 0.5Å
+#This will create all input files needed for min, equil. and production steps for each distance/dihedral window. Here the restraint goes from 6Å to 30Å in intervals of 0.5Å
 
 **Step 2:** sh run.sh
 
